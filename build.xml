@@ -19,13 +19,11 @@
         </fileset>
     </path>
 
-    <!-- Need classpath to run this -->
     <target name="compile" depends="init" description="compile the source ">
         <javac includeantruntime="false" srcdir="${src.dir}"
                destdir="${build.dir}" classpathref="classpath" />
     </target>
 
-    <!-- Group all dependencies into a big dependency-all.jar -->
     <target name="copy-dependencies">
 
         <mkdir dir="${dist.lib.dir}" />
@@ -38,7 +36,6 @@
 
     </target>
 
-    <!-- jar it, extract above dependency-all.jar and zip it with project files -->
     <target name="jar" depends="compile, copy-dependencies"
             description="package, output to JAR">
 
@@ -60,7 +57,6 @@
         <delete dir="${dist.dir}" />
     </target>
 
-    <!-- Default, run this -->
     <target name="main" depends="clean, compile, jar" />
 
 </project>
