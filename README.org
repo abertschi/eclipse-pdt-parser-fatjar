@@ -1,0 +1,12 @@
+* Eclipse PDT fatjar parser
+
+Bundles the Eclipse PDT parser as a fatjar (with all its dependencies) and prints parsed AST to stdout.
+Can be used to verify correct parsing behavior of graalphp-parser.
+
+** Build
+```
+$ ant -buildfile build.xml
+$ java -jar dist/eclipse-pdt-parser.jar /path/to/phpfile.php
+```
+
+https://github.com/abertschi/graalphp
