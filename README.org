@@ -4,9 +4,9 @@ Bundles the Eclipse PDT parser as a fatjar (with all its dependencies) and print
 Can be used to verify correct parsing behavior of graalphp-parser.
 
 ** Build
-```
+#+begin_src sh
 $ ant -buildfile build.xml
 $ java -jar dist/eclipse-pdt-parser.jar /path/to/phpfile.php
-```
+#+end_src
 
 https://github.com/abertschi/graalphp
